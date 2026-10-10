@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>For buyers | Shamba Link</title>
+</head>
+<body data-page="buyer">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>Buyer page</h1>
+      <p class="muted">Restaurants, retailers and households: tell farmers what you need. They will send you offers. You can also <a href="marketplace.html">browse the marketplace</a> for produce that is ready now.</p>
+
+      <div class="split">
+        <form id="request-form" novalidate>
+          <h2>Request produce</h2>
+          <p id="request-msg" class="notice" role="status" hidden></p>
+          <div class="fields">
+            <div class="two">
+              <div><label for="b-name">Your name or business</label><input id="b-name" type="text" autocomplete="organization"></div>
+              <div><label for="b-type">I am a</label>
+                <select id="b-type"><option>Household</option><option>Restaurant</option><option>Retailer</option></select>
+              </div>
+            </div>
+            <div class="two">
+              <div><label for="b-crop">Produce you need</label><select id="b-crop"></select></div>
+              <div id="b-other-box" hidden><label for="b-other">Produce name</label><input id="b-other" type="text"></div>
+            </div>
+            <div class="two">
+              <div><label for="b-qty">Quantity needed</label><input id="b-qty" type="number" min="1"></div>
+              <div><label for="b-unit">Unit</label><select id="b-unit"></select></div>
+            </div>
+            <div class="two">
+              <div><label for="b-price">Highest price per unit</label><input id="b-price" type="number" step="0.01" min="0.01"></div>
+              <div><label for="b-date">Needed by</label><input id="b-date" type="date"></div>
+            </div>
+            <div><label for="b-location">Delivery location</label><input id="b-location" type="text"></div>
+            <div><label for="b-notes">Notes for farmers (optional)</label><input id="b-notes" type="text" placeholder="Quality, packaging, how often you order"></div>
+            <div><button class="btn" type="submit">Post my request</button></div>
+          </div>
+        </form>
+
+        <div>
+          <h2>Your requests and offers</h2>
+          <div id="my-requests"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

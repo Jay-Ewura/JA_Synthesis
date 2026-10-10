@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Marketplace | Shamba Link</title>
+</head>
+<body data-page="marketplace">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>Marketplace</h1>
+      <p class="muted">Harvest that farmers have listed and that is ready to order. Need something else? <a href="buyer.html">Post a request</a> and farmers will come to you.</p>
+
+      <div class="toolbar">
+        <div><label for="search">Search crop or farmer</label><input id="search" type="search" placeholder="Try tomatoes"></div>
+        <div><label for="category">Category</label><select id="category"><option value="">All</option></select></div>
+        <div><label for="location">Location</label><select id="location"><option value="">All</option></select></div>
+        <div><label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="">Default</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="result-count" class="muted" aria-live="polite"></p>
+      <div id="product-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Compare prices | Shamba Link</title>
+</head>
+<body data-page="compare">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>Compare prices</h1>
+      <p class="muted">Pick a crop and see who sells it cheapest.</p>
+      <label for="crop">Crop</label>
+      <select id="crop"></select>
+      <div id="compare-out" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

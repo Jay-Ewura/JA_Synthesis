@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Business model | FieldToTable</title>
+</head>
+<body data-page="business">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>How FieldToTable makes money</h1>
+      <p class="muted">Farmers and households use the basics for free. We earn when trade happens.</p>
+      <div class="table-wrap">
+        <table>
+          <caption class="sr-only">Income streams</caption>
+          <thead><tr><th>Income stream</th><th>How it works</th><th>Rate</th></tr></thead>
+          <tbody>
+            <tr><td>Transaction fee</td><td>Small cut of each completed order</td><td>3% of order value</td></tr>
+            <tr><td>Delivery commission</td><td>Share of the delivery fee when we coordinate transport</td><td>15% of delivery fee</td></tr>
+            <tr><td>Business subscription</td><td>Restaurants and retailers get price alerts, bulk deals and priority delivery</td><td>20.00 per month</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Revenue estimator</h2>
+      <p class="muted">Change the numbers to see monthly revenue.</p>
+      <div class="form-grid">
+        <div class="fields">
+          <div class="two">
+            <div><label for="m-orders">Orders per month</label><input id="m-orders" type="number" min="0" value="500"></div>
+            <div><label for="m-value">Average order value</label><input id="m-value" type="number" min="0" value="80"></div>
+          </div>
+          <div class="two">
+            <div><label for="m-delivery">Orders using delivery (%)</label><input id="m-delivery" type="number" min="0" max="100" value="60"></div>
+            <div><label for="m-subs">Business subscribers</label><input id="m-subs" type="number" min="0" value="40"></div>
+          </div>
+        </div>
+        <aside id="revenue-out" class="summary" aria-live="polite"></aside>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

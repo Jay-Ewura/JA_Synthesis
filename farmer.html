@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>For farmers | Shamba Link</title>
+</head>
+<body data-page="farmer">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>Farmer page</h1>
+      <p class="muted">List your harvest so buyers can find it. Then check the buyer requests below and send offers.</p>
+
+      <div class="split">
+        <form id="harvest-form" novalidate>
+          <h2>List your harvest</h2>
+          <p id="harvest-msg" class="notice" role="status" hidden></p>
+          <div class="fields">
+            <div class="two">
+              <div><label for="f-name">Farm name</label><input id="f-name" type="text" autocomplete="organization"></div>
+              <div><label for="f-location">Location</label><input id="f-location" type="text"></div>
+            </div>
+            <div class="two">
+              <div><label for="f-crop">Crop</label><select id="f-crop"></select></div>
+              <div id="f-other-box" hidden><label for="f-other">Crop name</label><input id="f-other" type="text"></div>
+            </div>
+            <div class="two">
+              <div><label for="f-qty">Quantity available</label><input id="f-qty" type="number" min="1"></div>
+              <div><label for="f-unit">Unit</label><select id="f-unit"></select></div>
+            </div>
+            <div class="two">
+              <div><label for="f-price">Your price per unit</label><input id="f-price" type="number" step="0.01" min="0.01"></div>
+              <div><label for="f-ready">Ready for pickup from</label><input id="f-ready" type="date"></div>
+            </div>
+            <div>
+              <label for="f-photo">Photo of your harvest (optional)</label>
+              <input id="f-photo" type="file" accept="image/*">
+              <img id="photo-preview" class="photo-preview" alt="Preview of your harvest photo" hidden>
+            </div>
+            <div><button class="btn" type="submit">List my harvest</button></div>
+          </div>
+        </form>
+
+        <div>
+          <h2>Your listings</h2>
+          <div id="my-listings" class="grid"></div>
+          <p class="muted">Have extra produce that won't last? <a href="surplus.html">Post a surplus alert</a> to sell it at a discount.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What buyers are asking for</h2>
+      <p class="muted">These buyers are waiting for produce. Send an offer and they can accept it.</p>
+      <div class="toolbar single">
+        <div><label for="board-crop">Show requests for</label><select id="board-crop"><option value="">All crops</option></select></div>
+      </div>
+      <div id="board"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

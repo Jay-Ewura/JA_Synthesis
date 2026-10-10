@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Surplus deals | Shamba Link</title>
+</head>
+<body data-page="surplus">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>Surplus deals</h1>
+      <p class="muted">Extra produce at a discount, before it goes to waste. Deals disappear when time runs out.</p>
+      <div id="deal-list" class="grid"></div>
+    </section>
+
+    <section>
+      <h2>Farmers: post a surplus alert</h2>
+      <form id="surplus-form" novalidate>
+        <p id="s-msg" class="notice" role="status" hidden></p>
+        <div class="fields">
+          <div class="two">
+            <div><label for="s-farmer">Farm name</label><input id="s-farmer" type="text"></div>
+            <div><label for="s-product">Product</label><select id="s-product"></select></div>
+          </div>
+          <div class="two">
+            <div><label for="s-qty">Extra quantity</label><input id="s-qty" type="number" min="1"></div>
+            <div><label for="s-discount">Discount (5 to 70%)</label><input id="s-discount" type="number" min="5" max="70" value="30"></div>
+          </div>
+          <div><label for="s-hours">Deal lasts (hours, 1 to 72)</label><input id="s-hours" type="number" min="1" max="72" value="12"></div>
+          <div><button class="btn" type="submit">Post surplus alert</button></div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Orders | Shamba Link</title>
+</head>
+<body data-page="order">
+  <header id="site-header"></header>
+
+  <main class="container">
+    <section>
+      <h1>Place an order</h1>
+      <p class="muted">Order in bulk to save more, and choose how you want to receive it.</p>
+      <p id="deal-note" class="notice" hidden></p>
+
+      <div class="form-grid">
+        <form id="order-form" novalidate>
+          <div id="errors" class="notice error" role="alert" hidden></div>
+          <div class="fields">
+            <div class="two">
+              <div><label for="buyer">Your name or business</label><input id="buyer" type="text" autocomplete="organization"></div>
+              <div><label for="buyer-type">I am a</label>
+                <select id="buyer-type"><option>Household</option><option>Restaurant</option><option>Retailer</option></select>
+              </div>
+            </div>
+            <div><label for="product">Product</label><select id="product"></select></div>
+            <div class="two">
+              <div><label for="qty">Quantity</label><input id="qty" type="number" min="1" value="10"></div>
+              <div><label for="date">Date needed</label><input id="date" type="date"></div>
+            </div>
+            <div class="two">
+              <div><label for="method">Pickup or delivery</label>
+                <select id="method"><option value="pickup">Pickup from farm</option><option value="delivery">Delivery</option></select>
+              </div>
+              <div id="zone-box" hidden><label for="zone">Delivery distance</label>
+                <select id="zone"><option value="near">Under 10 km</option><option value="mid">10 to 30 km</option><option value="far">Over 30 km</option></select>
+              </div>
+            </div>
+            <button class="btn" type="submit">Place order</button>
+          </div>
+        </form>
+
+        <aside id="summary" class="summary" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="orders-heading">Your orders</h2>
+      <div id="order-list"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
